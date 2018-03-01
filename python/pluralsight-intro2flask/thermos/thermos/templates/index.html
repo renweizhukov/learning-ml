@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-Pytwis -- Welcome
+Thermos -- Welcome
 {% endblock %}
 
 {% block content %}
@@ -11,8 +11,16 @@ Pytwis -- Welcome
             <p>pytwis is a simple twitter clone powered by python, flask, and redis.</p>
         </header>
         <section>
-            <h2>Title: {{ title }}</h2>
-            <p>Text: {{ user.firstname }} {{ user.lastname }}</p>
+            <h2>Recently Added</h2>
+            {% if new_bookmarks %}
+                <ul>
+                    {% for bm in new_bookmarks %}
+                        <li><a href="{{ url_for('user', username=bm.user.username) }}">{{ bm.user.username }}</a> added <a href="{{ bm.url }}">{{ bm.url }}</a> with description: {{ bm.description }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                No bookmarks yet.
+            {% endif %}
         </section>
         <section>
             <h2>article section h2</h2>

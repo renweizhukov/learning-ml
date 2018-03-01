@@ -15,3 +15,7 @@ https://app.pluralsight.com/library/courses/python-beyond-basics/table-of-conten
 ### 1.3 Pluralsight course -- Advanced Python
 
 https://app.pluralsight.com/library/courses/advanced-python/table-of-contents
+
+### 1.4 Pluralsight course -- Introduction to the Flask Microframework
+
+https://app.pluralsight.com/library/courses/flask-micro-framework-introduction/table-of-contents
