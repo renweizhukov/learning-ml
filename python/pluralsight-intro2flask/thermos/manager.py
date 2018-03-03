@@ -1,18 +1,40 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from flask.ext.script import Manager, prompt_bool
-
 from thermos import app, db
-from thermos.models import User
+# Although Bookmark is not referenced in this file, it is needed to imported so that 
+# it can be detected by the database migrator.
+from thermos.models import User, Bookmark, Tag
+
+from flask_script import Manager, prompt_bool
+from flask_migrate import Migrate, MigrateCommand
 
 manager = Manager(app)
+migrate = Migrate(app, db)
+
+manager.add_command('db', MigrateCommand)
 
 @manager.command
-def initdb():
-    db.create_all()
-    db.session.add(User(username='reindert', email='reindert@example.com'))
-    db.session.add(User(username='arjen', email='arjen@example.com'))
+def insert_data():
+    reindert = User(username="reindert", email="reindert@example.com", password="test")
+    db.session.add(reindert)
+
+    def add_bookmark(url, description, tags):
+        db.session.add(Bookmark(url=url, description=description, user=reindert,
+                                tags=tags))
+
+    for name in ["python", "flask", "webdev", "programming", "training", "news", "orm", "databases", "emacs", "gtd", "django"]:
+        db.session.add(Tag(name=name))
+    db.session.commit()
+
+    add_bookmark("http://www.pluralsight.com", "Pluralsight. Hardcore developer training.", "training,programming,python,flask,webdev")
+    add_bookmark("http://www.python.org", "Python - my favorite language", "python")
+    add_bookmark("http://flask.pocoo.org", "Flask: Web development one drop at a time.", "python,flask,webdev")
+    add_bookmark("http://www.reddit.com", "Reddit. Frontpage of the internet", "news,coolstuff,fun")
+    add_bookmark("http://www.sqlalchemyorg", "Nice ORM framework", "python,orm,databases")
+
+    arjen = User(username="arjen", email="arjen@robben.nl", password="test")
+    db.session.add(arjen)
     db.session.commit()
     print('Initialized the database')
     
