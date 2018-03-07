@@ -1,0 +1,4 @@
+{
+  "test_patient.py::TestPatient::()::test_clash_overlapping_today": true,
+  "test_prescription.py::TestPrescription::()::test_days_taken_excludes_future_dates": true
+}
