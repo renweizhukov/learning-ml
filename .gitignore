@@ -1,3 +1,6 @@
+# Ignore the TensorFlow models repository.
+tensorflow/models/
+
 # Virtual environment files
 *_env/
 

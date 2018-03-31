@@ -23,3 +23,7 @@ https://app.pluralsight.com/library/courses/flask-micro-framework-introduction/t
 ### 1.5 Pluralsight course -- Unit Testing with Python
 
 https://app.pluralsight.com/library/courses/unit-testing-python/table-of-contents
+
+### 1.6 Pluralsight course -- The Python Developer's Toolkit
+
+https://app.pluralsight.com/library/courses/python-developers-toolkit/table-of-contents
