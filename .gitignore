@@ -1,3 +1,6 @@
+# labelImg
+labelImg/
+
 # Ignore the TensorFlow models repository.
 tensorflow/models/
 

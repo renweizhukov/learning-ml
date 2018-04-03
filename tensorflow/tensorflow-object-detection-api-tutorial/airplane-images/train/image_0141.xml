@@ -1,0 +1,26 @@
+<annotation>
+	<folder>airplane-images</folder>
+	<filename>image_0141.jpg</filename>
+	<path>/home/renwei/repos/github/learning-ml/tensorflow/tensorflow-object-detection-api-tutorial/airplane-images/image_0141.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>410</width>
+		<height>166</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>airplane</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>61</xmin>
+			<ymin>33</ymin>
+			<xmax>349</xmax>
+			<ymax>136</ymax>
+		</bndbox>
+	</object>
+</annotation>
