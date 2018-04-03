@@ -27,3 +27,9 @@ https://app.pluralsight.com/library/courses/unit-testing-python/table-of-content
 ### 1.6 Pluralsight course -- The Python Developer's Toolkit
 
 https://app.pluralsight.com/library/courses/python-developers-toolkit/table-of-contents
+
+## 2. TensorFlow
+
+### 2.1 pythonprogramming.net -- TensorFlow Object Detection API Tutorial
+
+https://pythonprogramming.net/introduction-use-tensorflow-object-detection-api-tutorial/
